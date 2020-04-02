@@ -46,14 +46,14 @@ author:
 
 
 ### Posts ###
-permalink: _includes/blog/:title
+permalink: /blog/:title
 
 
 ### Collections ###
 collections:
   projects:
     output: true
-    permalink: _includes/projects/:name
+    permalink: /projects/:name
   elements:                                             # For Documentation Only
     output: true                                        # For Documentation Only
 
