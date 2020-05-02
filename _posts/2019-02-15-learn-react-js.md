@@ -1,10 +1,15 @@
 ---
 title: Learn React.js in 5 minutes
-tags: [React, JavaScript, Web Development]
+tags:
+  - React
+  - JavaScript
+  - Web Development
 style: border
 color: primary
 description: A quick introduction to the popular JavaScript library.
 ---
+
+# 2019-02-15-learn-react-js
 
 Source: [freecodecamp](https://medium.freecodecamp.org/learn-react-js-in-5-minutes-526472d292f4)
 
@@ -14,7 +19,7 @@ This tutorial will give you a basic understanding of React.js by building a very
 
 When getting started with React, you should use the simplest setup possible: an HTML file which imports the `React` and the `ReactDOM` libraries using script tags, like this:
 
-```html
+```markup
 <html>
 <head>
 <script src="https://unpkg.com/react@15/dist/react.min.js"> </script><script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js">
@@ -39,7 +44,7 @@ We’ve also imported Babel, as React uses something called JSX to write markup.
 There are more two things I want you to notice:
 
 1. The `<div>` with the id of `#root`. This is the entry point for our app. This is where our entire app will live.
-1. The `<script type="text/babel">` tag in the body. This is where we’ll write our React.js code.
+2. The `<script type="text/babel">` tag in the body. This is where we’ll write our React.js code.
 
 If you want to experiment with the code, check out this Scrimba playground.
 
@@ -68,11 +73,11 @@ ReactDOM.render(
 );
 ```
 
-So this is where we connect our `Hello` component with the entry point for the app (`<div id="root"></div>`). It results in the following:
+So this is where we connect our `Hello` component with the entry point for the app \(`<div id="root"></div>`\). It results in the following:
 
 ![](https://cdn-images-1.medium.com/max/1000/1*T-bmSzg0KlijyB3dG1M-ow.png)
 
-The HTML’ish syntax we just looked at (`<h1>` and `<Hello/>`) is the JSX code I mentioned earlier. It’s not actually HTML, though what you write there does end up as HTML tags in the DOM.
+The HTML’ish syntax we just looked at \(`<h1>` and `<Hello/>`\) is the JSX code I mentioned earlier. It’s not actually HTML, though what you write there does end up as HTML tags in the DOM.
 
 The next step is to get our app to handle data.
 
@@ -82,13 +87,11 @@ There are two types of data in React: props and state. The difference between th
 
 The key difference is that state is private and can be changed from within the component itself. Props are external, and not controlled by the component itself. It’s passed down from components higher up the hierarchy, who also control the data.
 
-{% include elements/highlight.html text="A component can change its internal state directly. It can not change its props directly." %}
-
 Let’s take a closer look at props first.
 
 ## Props
 
-Our `Hello` component is very static, and it renders out the same message regardless. A big part of React is reusability, meaning the ability to write a component once, and then reuse it in different use cases — for example, to display different messages.
+Our `Hello` component is very static, and it renders out the same message regardless. A big part of React is reusability, meaning the ability to write a component once, and then reuse it in different use cases — for example, to display different messages.
 
 To achieve this type of reusability, we’ll add props. This is how you pass props to a component:
 
@@ -121,9 +124,9 @@ However, what if we want the component to be able to change its own data? Then w
 
 ## State
 
-The other way of storing data in React is in the component’s state. And unlike props — which can’t be changed directly by the component — the state can.
+The other way of storing data in React is in the component’s state. And unlike props — which can’t be changed directly by the component — the state can.
 
-So if you want the data in your app to change — for example based on user interactions — it must be stored in a component’s state somewhere in the app.
+So if you want the data in your app to change — for example based on user interactions — it must be stored in a component’s state somewhere in the app.
 
 ### Initializing state
 
@@ -147,8 +150,7 @@ class Hello extends React.Component {
 
 Before we set the state, we have to call `super()` in the constructor. This is because `this` is uninitialized before `super()` has been called.
 
-Changing the state
-To modify the state, simply call **this.setState()**, passing in the new state object as the argument. We’ll do this inside a method which we’ll call `updateMessage`.
+Changing the state To modify the state, simply call **this.setState\(\)**, passing in the new state object as the argument. We’ll do this inside a method which we’ll call `updateMessage`.
 
 ```javascript
 class Hello extends React.Component {
@@ -218,6 +220,7 @@ class Hello extends React.Component {
 }
 ```
 
-The **updateMessage** method then calls **this.setState()** which changes the `this.state.message` value. And when we click the button, here’s how that will play out:
+The **updateMessage** method then calls **this.setState\(\)** which changes the `this.state.message` value. And when we click the button, here’s how that will play out:
 
 Congrats! You now have a very basic understanding of the most important concepts in React.
+

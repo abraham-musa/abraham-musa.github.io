@@ -1,10 +1,17 @@
 ---
 title: What the heck is a Callback?
-tags: [JavaScript, Nodejs, Web Development]
+tags:
+  - JavaScript
+  - Nodejs
+  - Web Development
 style: fill
 color: danger
-description: Learn and understand the basics of callbacks in just 6 minutes with easy examples.
+description: >-
+  Learn and understand the basics of callbacks in just 6 minutes with easy
+  examples.
 ---
+
+# 2018-12-01-what-the-heck-is-a-callback
 
 Source: [Brandon Morelli](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)
 
@@ -12,7 +19,7 @@ Source: [Brandon Morelli](https://codeburst.io/javascript-what-the-heck-is-a-cal
 
 ## What is a Callback?
 
-**Simply put:** A callback is a function that is to be executed **after** another function has finished executing — hence the name ‘call back’.
+**Simply put:** A callback is a function that is to be executed **after** another function has finished executing — hence the name ‘call back’.
 
 **More complexly put:** In JavaScript, functions are objects. Because of this, functions can take functions as arguments, and can be returned by other functions. Functions that do this are called **higher-order functions**. Any function that is passed as an argument is called a **callback function**.
 
@@ -20,7 +27,7 @@ Source: [Brandon Morelli](https://codeburst.io/javascript-what-the-heck-is-a-cal
 
 ## Why do we need Callbacks?
 
-For one very important reason — JavaScript is an event driven language. This means that instead of waiting for a response before moving on, JavaScript will keep executing while listening for other events. Lets look at a basic example:
+For one very important reason — JavaScript is an event driven language. This means that instead of waiting for a response before moving on, JavaScript will keep executing while listening for other events. Lets look at a basic example:
 
 ```javascript
 function first(){
@@ -33,7 +40,7 @@ first();
 second();
 ```
 
-As you would expect, the function `first` is executed first, and the function `second` is executed second — logging the following to the console:
+As you would expect, the function `first` is executed first, and the function `second` is executed second — logging the following to the console:
 
 ```javascript
 // 1
@@ -71,13 +78,13 @@ Even though we invoked the `first()` function first, we logged out the result of
 
 It’s not that JavaScript didn’t execute our functions in the order we wanted it to, it’s instead that **JavaScript didn’t wait for a response from `first()` before moving on to execute `second()`**.
 
-So why show you this? Because you can’t just call one function after another and hope they execute in the right order. {% include elements/highlight.html text="Callbacks are a way to make sure certain code doesn’t execute until other code has already finished execution." %}
+So why show you this? Because you can’t just call one function after another and hope they execute in the right order.
 
 ## Create a Callback
 
 _Alright, enough talk, lets create a callback!_
 
-First, open up your Chrome Developer Console (Windows: Ctrl + Shift + J)(Mac: Cmd + Option + J) and type the following function declaration into your console:
+First, open up your Chrome Developer Console \(Windows: Ctrl + Shift + J\)\(Mac: Cmd + Option + J\) and type the following function declaration into your console:
 
 ```javascript
 function doHomework(subject) {
@@ -92,7 +99,7 @@ doHomework('math');
 // Alerts: Starting my math homework.
 ```
 
-Now lets add in our callback — as our last parameter in the `doHomework()` function we can pass in `callback`. The callback function is then defined in the second argument of our call to `doHomework()`.
+Now lets add in our callback — as our last parameter in the `doHomework()` function we can pass in `callback`. The callback function is then defined in the second argument of our call to `doHomework()`.
 
 ```javascript
 function doHomework(subject, callback) {
@@ -136,7 +143,8 @@ T.get('search/tweets', params, function(err, data, response) {
 })
 ```
 
-- `T.get` simply means we are making a get request to Twitter
-- There are three parameters in this request: `‘search/tweets’`, which is the route of our request, `params` which are our search parameters, and then an anonymous function which is our callback.
+* `T.get` simply means we are making a get request to Twitter
+* There are three parameters in this request: `‘search/tweets’`, which is the route of our request, `params` which are our search parameters, and then an anonymous function which is our callback.
 
-A callback is important here because we need to wait for a response from the server before we can move forward in our code. We don’t know if our API request is going to be successful or not so after sending our parameters to search/tweets via a get request, we wait. Once Twitter responds, our callback function is invoked. Twitter will either send an `err` (error) object or a `response` object back to us. In our callback function we can use an `if()` statement to determine if our request was successful or not, and then act upon the new data accordingly.
+A callback is important here because we need to wait for a response from the server before we can move forward in our code. We don’t know if our API request is going to be successful or not so after sending our parameters to search/tweets via a get request, we wait. Once Twitter responds, our callback function is invoked. Twitter will either send an `err` \(error\) object or a `response` object back to us. In our callback function we can use an `if()` statement to determine if our request was successful or not, and then act upon the new data accordingly.
+

@@ -1,4 +1,6 @@
-- Automated Table of Contents
-{:toc}
+# 03-toc
 
-***
+* Automated Table of Contents
+
+  {:toc}
+

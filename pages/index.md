@@ -1,6 +1,2 @@
----
-layout: default
-permalink: /
----
+# index
 
-{% include landing.html %}

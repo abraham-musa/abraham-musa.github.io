@@ -1,10 +1,13 @@
 ---
 title: A better Hello World
-tags: [Software Development]
+tags:
+  - Software Development
 style: fill
 color: dark
 description: A different “hello world” to demonstrate language features better.
 ---
+
+# 2016-07-23-a-better-hello-world
 
 Source: [RICO STA. CRUZ](https://ricostacruz.com/til/a-better-hello-world)
 
@@ -31,7 +34,7 @@ print "Hello, world!"
 
 In today’s world of more succint programming languages, we need a different “hello world” to demonstrate language features better. Here’s what I propose:
 
-```
+```text
 // hello.js
 function getGreeting (name) {
   return `Hello, ${name}!`
@@ -43,9 +46,10 @@ console.log(message)
 
 This simple example demonstrates a few more things than printing strings:
 
-- How to write a function with an argument
-- Returning values from functions
-- How to use variables
-- The naming convention for functions (camelCase versus snake_case)
-- String concatenation
-- Comments
+* How to write a function with an argument
+* Returning values from functions
+* How to use variables
+* The naming convention for functions \(camelCase versus snake\_case\)
+* String concatenation
+* Comments
+

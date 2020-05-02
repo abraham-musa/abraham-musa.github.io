@@ -1,4 +1,4 @@
-#### Timeline Events
+# Timeline Events
 
 Add the following lines to `_data/timeline.yml`:
 
@@ -8,3 +8,4 @@ Add the following lines to `_data/timeline.yml`:
   to: 2018
   description: Write item description here.
 ```
+
