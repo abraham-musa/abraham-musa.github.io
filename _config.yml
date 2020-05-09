@@ -4,7 +4,7 @@ description         : >-
                       "I turn coffee :coffee: into code,
                       use tabs over spaces
                       and never broke production."
-baseurl             : "/portfolYOU"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : abraham-musa/abraham-musa.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : abraham-musa/abraham-musa.github.io 
 
@@ -24,7 +24,7 @@ nav_exclude:                                            # The following paths ar
 
 ### Author Info ###
 author:
-  name              : John Doe
+  name              : Abraham Musa
   image             : https://bit.ly/2KCvgVJ
   behance           : your_username
 # dribbble          : your_username
